@@ -8,6 +8,10 @@
 
 static const int DEFAULT_JPG_QUALITY = 100;
 
+static bool loadImage(Image* img, const char* name);
+static bool createImage(Image* img, int width, int height, int channels, ImageFormat format);
+static void writeImage(const Image* img, const char* name, int quality);
+
 void initImage(Image* img) {
     memset(img, 0, sizeof(Image));
 
